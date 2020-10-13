@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkorange;
+}
+</style>
+    <meta charset="utf-8">
+    <title>Team Fortress 2 Quiz</title>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="manifest" href="manifest.json">
+	
+	<link rel="apple-touch-icon" href="/icons/icons-192x192.png">
+	<meta name="theme-color" content="#000000" />
+	
+</head>
+<body onLoad="initialize()">
+
+<h1><div id="lightbox" onclick="closeLightBox()">
+	 <div id="message">You have an error</div>
+	</div>
+
+<h2>Team Fortress 2 Quiz</h2>
+<p>Welcome to the Team Fortress 2 quiz. Test your knowledge of the game and its lore and we'll give you a title based on how well you did! Good luck!</p>
+
+<div class="grid-container">
+  <div class="header">
+    <div id="question">The Question</div>
+  </div>
+  
+  <div class="left">
+    <div>
+    Possible Answers
+     <div class="options" id="a" onclick="markIt('a')">A.</div>
+	 <div class="options" id="b" onclick="markIt('b')">B.</div>
+     <div class="options" id="c" onclick="markIt('c')">C.</div>
+	 <div class="options" id="d" onclick="markIt('d')">D.</div>
+	</div>
+  </div> 
+
+  
+  <div class="right"> <img id="image" src="quizimages/q1.jpg" alt="Image"></div>
+  
+  <div class="footer1" onclick="skipQuestion()">
+    <p>Next Question (-1 Point!)</p>
+  </div>
+  
+  <div class="footer2">
+    <p id="score">Score</p>
+  </div>
+</div>
+	<script src="quizproject.js"></script>
+</body>
+</html>
